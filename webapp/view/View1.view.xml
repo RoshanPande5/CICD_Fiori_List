@@ -1,0 +1,50 @@
+<mvc:View
+    controllerName="mm.practiceproject1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+        <SearchField id="_IDGenSearchField1" search="onSearch"  width="20%"/>
+            <List
+                id="_IDGenList1"
+                items="{Jsondemo>/fruits}"
+                mode="Delete"
+                delete="onDelete"
+               
+            >
+                <items>
+                    <ObjectListItem
+                        id="_IDGenObjectListItem1"
+                        type="Navigation"
+                        
+                        title="{Jsondemo>name}"
+                        icon="{Jsondemo>image}"
+                        number="{Jsondemo>price}"
+                        numberUnit="{Jsondemo>currency}"
+                        
+                        press="onListItemPress"
+                      
+                    >
+                         <firstStatus>  <ObjectStatus id="_IDGenObjectStatus1" text="{Jsondemo>inStock}" state="{path : 'Jsondemo>inStock',
+                                                                       formatter: '.formatter.Changestatus'}" />
+                       
+                         </firstStatus>
+                         <ObjectAttribute id="_IDGenObjectAttribute1" text="{Jsondemo>Quantity}"></ObjectAttribute>
+
+                    </ObjectListItem>
+                    
+                </items>
+            </List>
+
+          
+
+            
+        </content>
+    </Page>
+    
+</mvc:View>

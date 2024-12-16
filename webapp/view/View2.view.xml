@@ -1,0 +1,56 @@
+<mvc:View xmlns:form="sap.ui.layout.form"
+    controllerName="mm.practiceproject1.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>   
+
+      
+        
+
+     
+                   
+
+
+      
+
+    <FlexBox id="_IDGenFlexBox1" justifyContent="Center" alignContent="Center"
+       class="sapUiLargeMarginTop">
+
+
+      <f:SimpleForm id="_IDGenSimpleForm1" >
+      <f:content>
+
+    
+
+      <Text id="_IDGenText1" text="{Jsondemo>name}"/>
+
+       <Image id="_IDGenText11" src="{Jsondemo>image}"/>
+
+     
+
+       <Label id="_IDGenLabel3" text="price" />
+      <Input id="_IDGenInput2" value="{Jsondemo>price} {Jsondemo>currency}" />
+
+    
+
+       <Label id="_IDGenLabel5" text="inStock" />
+      <Input id="_IDGenInput4" value="{Jsondemo>inStock}" />
+ 
+     
+      	</f:content>
+      </f:SimpleForm>
+       </FlexBox> 
+
+        </content> 
+
+    </Page>
+</mvc:View>

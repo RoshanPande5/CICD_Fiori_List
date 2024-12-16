@@ -1,0 +1,155 @@
+{
+  "_version": "1.49.0",
+  "sap.app": {
+    "id": "mm.practiceproject1",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.11.1",
+      "toolsId": "9e6a2d48-be55-4b13-8eab-ff63d5047108"
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "ZFioriAplication-Display": {
+          "semanticObject": "ZFioriAplication",
+          "action": "Display",
+          "title": "{{flpTitle}}",
+          "subTitle": "{{flpSubtitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.118.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "mm.practiceproject1.i18n.i18n"
+        }
+      },
+      "Jsondemo": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data.json"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "mm.practiceproject1.view",
+        "controlAggregation": "pages",
+        "controlId": "App",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "App",
+          "pattern": "targetrouter",
+          "target": [
+            "App"
+          ]
+        },
+        {
+          "name": "View1",
+          "pattern": "",
+          "target": [
+            "View1"
+          ]
+        },
+        {
+          "name": "View2",
+          "pattern": "View21/{pathData}",
+          "target": [
+            "View2"
+          ]
+        }
+      ],
+      "targets": {
+        "App": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "App",
+          "viewName": "App"
+        },
+        "View1": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "",
+          "viewName": "View1"
+        },
+        "View2": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "",
+          "viewName": "View2"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "mm.practiceproject1.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "mmpracticeproject1"
+  }
+}
